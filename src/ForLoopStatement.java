@@ -6,10 +6,10 @@ public class ForLoopStatement {
 
 		int actual_capacity = 10;
 
-		for (int consumed_drinks = 1; consumed_drinks <= 10; consumed_drinks++) {
+		for (int consumed_drinks = 1; consumed_drinks <= actual_capacity; consumed_drinks++) {
+			System.out.println("I can drink " + (actual_capacity - consumed_drinks) + " more times");
+			if (consumed_drinks == actual_capacity) {
 
-			System.out.println("I can drink " + consumed_drinks + " more times");
-			if (consumed_drinks >= actual_capacity) {
 				System.out.println("Needs break now");
 			} else {
 				System.out.println("Keep enjoying your drinks");

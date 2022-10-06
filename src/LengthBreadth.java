@@ -9,7 +9,7 @@ public class LengthBreadth {
 		System.out.println("Rectangle Perimeter:" + 2*(rec_len + rec_brd));
 		System.out.println("Rectangle Area:" + (rec_len * rec_brd));
 		
-		int num++;
+		
 
 	}
 
