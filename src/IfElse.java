@@ -5,8 +5,6 @@ public class IfElse {
 		// TODO Auto-generated method stub
 		
 		int x=20,y=20;
-		int z=y+x;
-		
 		
 		if(y==x) {
 			System.out.println("These both equations are equal ");
