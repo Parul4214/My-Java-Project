@@ -49,12 +49,12 @@ public class BookLibraryMain {
 				} else if (requiredBookName.equalsIgnoreCase(bookDetails[i].bookName)
 						&& bookAuthor.equalsIgnoreCase(bookDetails[i].authorName) && (bookDetails[i].isBookIssued)) {
 
-					System.out.println("This Book is already issued");
+					System.out.println("This Book is already issued\n");
 					break;
 
 				} else if ((!(requiredBookName.equals(bookDetails[i].bookName))
 						|| !(bookAuthor.equals(bookDetails[i].authorName))) && i + 1 == bookDetails.length) {
-					System.out.println("Sorry, this book is not available");
+					System.out.println("Sorry, this book is not available\n");
 				}
 
 			}
