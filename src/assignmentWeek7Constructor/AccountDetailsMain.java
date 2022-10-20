@@ -6,8 +6,6 @@ public class AccountDetailsMain {
 
 	public static void main(String[] args) {
 
-		// AccountDetails Obj = new AccountDetails();
-
 		Scanner sc = new Scanner(System.in);
 
 		AccountDetails accountDetailsUser1 = new AccountDetails(101, 1111, 250.99);
@@ -20,7 +18,7 @@ public class AccountDetailsMain {
 				accountDetailsUser4, accountDetailsUser5 };
 		// The program should prompt the user to first enter the account number and PIN
 		boolean is_account_verified = false;
-		int acc_selector = 10; // initialized to fasle value
+		int acc_selector = 10; // initialized to false value
 		while (!is_account_verified) {
 
 			System.out.println("Please enter you Account Number");
@@ -49,17 +47,13 @@ public class AccountDetailsMain {
 				System.out.println("How much money do you want to withdraw?");
 				double withdraw_request = sc.nextDouble();
 
-				if (withdraw_request > allAccountsDatabase[acc_selector].get_balance())
-				{
+				if (withdraw_request > allAccountsDatabase[acc_selector].get_balance()) {
 					System.out.println("Insufficient funds, Requested amount exceeded available funds");
-					System.out.println("Do you wish to try again?\n"
-							+ "1: Try Again\n"
-							+ "2: Abort");
+					System.out.println("Do you wish to try again?\n" + "1: Try Again\n" + "2: Abort");
 					int abort_request = sc.nextInt();
-					if (abort_request==2)
-						user_abort=true;
-				}
-				else {
+					if (abort_request == 2)
+						user_abort = true;
+				} else {
 					allAccountsDatabase[acc_selector].withdraw_money(withdraw_request);
 					break;
 				}
@@ -73,7 +67,5 @@ public class AccountDetailsMain {
 		}
 
 	}
-//				System.out.println("Please enter ");
-//			}
 
 }
