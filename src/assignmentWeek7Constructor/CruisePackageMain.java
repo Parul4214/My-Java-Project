@@ -6,14 +6,9 @@ public class CruisePackageMain {
 
 	public static void main(String[] args) {
 
-//		We offer 4 different packages as displayed below. Please enter the cruise that you want to select.
-//		Scenic Cruise
-//		Sunset Cruise
-//		Discovery Cruise
-//		Mystery Cruise
 		double adult_buffet_price = 20.99;
 		double kids_buffet_price = 4.99;
-
+		// Constructor using 4 different objects
 		CruiseDetailsDatabase scenic_cruise = new CruiseDetailsDatabase("Scenic Cruise", 43.99, 12.99, 3);
 		CruiseDetailsDatabase sunset_cruise = new CruiseDetailsDatabase("Sunset Cruise", 52.99, 15.99, 1);
 		CruiseDetailsDatabase discovery_cruise = new CruiseDetailsDatabase("Discovery Cruise", 39.99, 4.99, 4);
@@ -21,28 +16,34 @@ public class CruisePackageMain {
 
 		// array of an object
 		CruiseDetailsDatabase[] cruise_details = { scenic_cruise, sunset_cruise, discovery_cruise, mystery_cruise };
-		int false_cruise_selection = cruise_details.length + 2;
+		// when user give any wrong input which doesn't exist in the given block of
+		// array
+		int false_cruise_selection = cruise_details.length + 101;
 		int which_cruise_selected = false_cruise_selection;
-		Scanner sc = new Scanner(System.in);
 		String continue_selector = "Null";
+
+		Scanner sc = new Scanner(System.in);// user input
 		do {
 
 			// using loop for any invalid input, keep asking until any valid input received
-			which_cruise_selected = false_cruise_selection;
+			which_cruise_selected = false_cruise_selection; // for input which doesn't match with exiting cruise name
 			while (which_cruise_selected == false_cruise_selection) {
+
 				System.out.println(
 						"We offer 4 different packages as displayed below. Please enter the cruise that you want to select\n"
-								+ "Scenic Cruise\n" + "Sunset Cruise\n" + "Discovery Cruise\n" + "Mystery Cruise ");
+								+ "Scenic Cruise\n" + "Sunset Cruise\n" + "Discovery Cruise\n" + "Mystery Cruise");
 				String selected_cruise = sc.nextLine();
 
 				System.out.println("You have selected: " + selected_cruise);
-//	
-//		The cruise that you have selected is Scenic Cruise which is a 2 day cruise
-//		Price for Adults	(greater than 12)	: 52.99 per day
-//		Price for kids above 5			: 15.99 per day
+				// iterating over array
+				// can be achieved by using loop
+				// block of code will execute until condition is true
+				// loop variable used as an index to access each element of array
 
 				for (int i = 0; i < cruise_details.length; i++) {
+					
 					if (selected_cruise.equalsIgnoreCase(cruise_details[i].cruise_name)) {
+						// printing the details included in package as per instructions
 						System.out.println("The cruise that you have selected is " + (cruise_details[i].cruise_name)
 								+ " which is a " + cruise_details[i].trip_duration + " day cruise");
 						System.out.println("Price for Adults (greater than 12)	: " + (cruise_details[i].adults_price)
@@ -53,6 +54,7 @@ public class CruisePackageMain {
 					}
 
 				}
+				// user will go back to the option where user has to select correct input
 				if (which_cruise_selected == false_cruise_selection)
 					System.out.println(
 							"Invalid Selection, Please try again \n----------------------------------------\n");
@@ -70,7 +72,7 @@ public class CruisePackageMain {
 
 		System.out.println("Enter the number of adults");
 		int adults_input = sc.nextInt(); // number of adults stored in it
-		if (adults_input >= 0 && adults_input <= 500)
+		if (adults_input >= 0 && adults_input <= 500)	//assumed the input shouldn't be more than 500 as per cruise capacity
 			System.out.println("You have selected: " + adults_input + " adults");
 		else if (adults_input > 500) {
 			System.out.println("Exceeded cruise capacity");
@@ -79,7 +81,7 @@ public class CruisePackageMain {
 
 		System.out.println("Enter the number of kids");
 		int kids_input = sc.nextInt();
-		int chargeable_kids = 0;
+		int chargeable_kids = 0;	//for kids age>5
 
 		if (kids_input == 0)
 			System.out.println("No Kids");
@@ -121,6 +123,7 @@ public class CruisePackageMain {
 					+ kids_buffet_price * chargeable_kids);
 			final_price = final_price + (kids_buffet_price * chargeable_kids);
 		}
+		
 		System.out.println("Total Price				= $" + final_price);
 		System.out.println("HST	 @ 15%				= $" + final_price * 0.15);
 		final_price = final_price * 1.15;

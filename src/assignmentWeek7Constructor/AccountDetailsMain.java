@@ -13,7 +13,7 @@ public class AccountDetailsMain {
 		AccountDetails accountDetailsUser3 = new AccountDetails(303, 3333, 450.99);
 		AccountDetails accountDetailsUser4 = new AccountDetails(404, 4444, 500.99);
 		AccountDetails accountDetailsUser5 = new AccountDetails(505, 5555, 650.99);
-
+		//array of object
 		AccountDetails[] allAccountsDatabase = { accountDetailsUser1, accountDetailsUser2, accountDetailsUser3,
 				accountDetailsUser4, accountDetailsUser5 };
 		// The program should prompt the user to first enter the account number and PIN
@@ -40,6 +40,8 @@ public class AccountDetailsMain {
 		System.out.println("You Account balance is " + allAccountsDatabase[acc_selector].account_balance);
 		System.out.println("Press\n" + "1: To Withdraw\n" + "2: To Deposit");
 		int entered_input = sc.nextInt();
+		
+		
 		boolean user_abort = false;
 
 		if (entered_input == 1) {

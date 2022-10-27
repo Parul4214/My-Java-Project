@@ -34,16 +34,22 @@ public class BookLibraryMain {
 			System.out.println("Who is the author");
 			String bookAuthor = sc.nextLine();
 
-			// iterating over the array
+			// iterating over array
+			// can be achieved by using loop
+			// block of code will execute until condition is true
+			// loop variable used as an index to access each element of array
+
 			for (int i = 0; i < bookDetails.length; i++) {
 				if (requiredBookName.equalsIgnoreCase(bookDetails[i].bookName)
 						&& bookAuthor.equalsIgnoreCase(bookDetails[i].authorName) && !bookDetails[i].isBookIssued) {
 					bookDetails[i].isBookIssued = true;
 					System.out.println(bookDetails[i].bookName + " is issued");
-					bookCount++;
+					bookCount++;// keep the count for the book issue number of times
 
 					System.out.println("\nBooks issued :" + bookCount);
-					System.out.println((3 - bookCount) + " more books can be issued\n");
+					System.out.println((3 - bookCount) + " more books can be issued\n");// to keep the count for how
+																						// many time more book can be
+																						// issues
 
 					break;
 				} else if (requiredBookName.equalsIgnoreCase(bookDetails[i].bookName)

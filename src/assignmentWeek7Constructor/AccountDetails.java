@@ -24,7 +24,7 @@ public class AccountDetails {
 	}
 
 	public void withdraw_money(double withdraw_money_requested) {
-		this.account_balance = account_balance - withdraw_money_requested;
+		account_balance = account_balance - withdraw_money_requested;
 		System.out.println("Withdraw Successful, Account Balance: " + account_balance);
 	}
 

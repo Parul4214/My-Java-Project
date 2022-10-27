@@ -3,13 +3,13 @@
 package assignmentWeek7Constructor;
 
 public class CruiseDetailsDatabase {
-
+//class level variables
 	String cruise_name;
 	double adults_price;
 	double kids_price;
 	int trip_duration;
-	int final_price;
-
+	
+//Parameterized constructor
 	public CruiseDetailsDatabase(String nameOfCruise, double priceOfAdult, double priceOfKids, int durationOfTrip) {
 
 		cruise_name = nameOfCruise;
