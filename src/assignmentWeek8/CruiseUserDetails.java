@@ -3,7 +3,8 @@ package assignmentWeek8;
 import java.util.Scanner;
 
 public class CruiseUserDetails {
-	Scanner sc = new Scanner(System.in);
+	Scanner obj = new Scanner(System.in);
+
 	private String user_name;
 	private String user_password;
 	private String full_name;
@@ -17,35 +18,54 @@ public class CruiseUserDetails {
 		this.phone_number = phone_number;
 	}
 
-	public void setFull_name() {
-
-		String enter_name = sc.nextLine();
-		this.full_name = enter_name;
-	}
-
+	
 	public void setUser_name() {
-
-		String enter_username = sc.nextLine();
+		String enter_username = obj.nextLine();
 		this.user_name = enter_username;
 	}
 
-	public void setUser_password() {
-		String enter_passwrd = sc.nextLine();
+	public void setUser_password(String enter_passwrd) {
 		this.user_password = enter_passwrd;
+		System.out.println("Password updated");
+
 	}
-
+	public void setFull_name() {
+		String enter_name = obj.next();
+		this.full_name = enter_name;
+	}
 	public void setPhone_number() {
-
-		String enter_num = sc.nextLine();
+		String enter_num = obj.next();
 		this.phone_number = enter_num;
 	}
 
+	public boolean isPasswordValidated() {
+	//	System.out.println("Enter your New Password");
+		System.out.println("Enter the password that you want to use:\n"
+				+ "Your password can be any combination of letters, numbers, and symbols.");
+		String new_password = obj.next();
+		if (new_password.length() < 8) {
+			System.out.println("Password is too short");
+		}else {	
+			System.out.println("Confirm password");
+			String confirm_password = obj.next();
+			if(new_password.equals(confirm_password)) {
+				this.user_password = new_password;
+				System.out.println("Password updated successfully");
+				return true;
+			}else {
+				System.out.println("Both passwords don't match");
+			}
+		}
+		return false;
+	}
+
+	
 	public int password_check() {
 		int password_check_attempts = 0;
 		int return_value = 0;
 		while (password_check_attempts < 3) {
 			System.out.println("Enter your existing password");
-			String old_passwrd = sc.next();
+			String old_passwrd = obj.next();
 			if (old_passwrd.equals(this.user_password)) {
 				System.out.println("Password Verified");
 				return_value = 1;
@@ -70,9 +90,9 @@ public class CruiseUserDetails {
 		int return_cred_value = 0;
 		while (cred_check_attempts < 3) {
 			System.out.println("Please Enter User Name");
-			String entered_username = sc.next();
+			String entered_username = obj.next();
 			System.out.println("Please Enter Password");
-			String entered_password = sc.next();
+			String entered_password = obj.next();
 			if (entered_password.equals(user_password) && entered_username.equals(entered_username)) {
 				return_cred_value = 1;
 				break;
@@ -89,5 +109,54 @@ public class CruiseUserDetails {
 		}
 		return return_cred_value;
 
+	}
+
+	public void update_info() {
+		System.out.println(
+				"Do you want to change your personal information. Press Y to change. Press any other alphabet to exit.");
+		String change_info = obj.next();
+		if (change_info.equalsIgnoreCase("Y")) {
+			System.out.println("Please enter the information you want to change.\n" + "1.	Password\n"
+					+ "2.	Phone number\n" + "3.	User Name\n");
+			int new_info = obj.nextInt();
+			if ((new_info == 1 || new_info == 2 || new_info == 3)) {
+				switch (new_info) {
+				case 1:
+					System.out.println("Enter your New Password");
+					String new_password = obj.next();
+					System.out.println("confirm password");
+					String confirm_password = obj.next();
+					if (new_password.equals(confirm_password)) {
+						this.user_password = new_password;
+						System.out.println("Password updated successfully");
+					} else {
+						System.out.println("Password doesn't match");
+					}
+					break;
+
+				case 2:
+					System.out.println("Enter your New phone number");
+					String new_phnNumber = obj.next();
+					this.phone_number = new_phnNumber;
+					System.out.println("Phone number updated successfully");
+					break;
+				case 3:
+					System.out.println("Enter your New User Name");
+					String new_user_name = obj.next();
+					this.user_name = new_user_name;
+					System.out.println("User Name updated successfully");
+					break;
+				default:
+					System.out.println("System Abort");
+					System.exit(0);
+					break;
+
+				}
+			} else {
+				System.out.println("System Abort");
+				System.exit(0);
+			}
+
+		}
 	}
 }

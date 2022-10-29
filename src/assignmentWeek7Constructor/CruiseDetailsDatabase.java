@@ -1,3 +1,4 @@
+
 // Create a program to take input from the user and give the final price of the cruise they have booked including HST.
 
 package assignmentWeek7Constructor;
