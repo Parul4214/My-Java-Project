@@ -38,7 +38,7 @@ public class CruiseBookingMain {
 		}
 		/////////////////////////////////////////////////
 
-/*		String again;
+		String again;
 		String cruiseSelec;
 		int index = 0;
 		CruisePackageDetails scenicCruise = new CruisePackageDetails("Scenic Cruise", 43.99, 12.99, 3);
@@ -109,7 +109,7 @@ public class CruiseBookingMain {
 		String buffetMeal = sc.next();
 		cruiseDetails[index].setbuffetPrice(buffetMeal);
 		cruiseDetails[index].output(numAdults, ageAboveFive);
-*/
+
 		////////////////////////////////
 		// make changes after selecting cruise
 		

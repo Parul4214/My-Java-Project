@@ -36,6 +36,7 @@ public class CruiseUserDetails {
 	public void setPhone_number() {
 		String enter_num = obj.next();
 		this.phone_number = enter_num;
+		
 	}
 
 	public boolean isPasswordValidated() {
