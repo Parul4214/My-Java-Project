@@ -26,7 +26,7 @@ public class StringFormats {
 
 		System.out.println("Length of name is: " + (my_name.replace(" ", "")).length());
 
-		// Replace all e with another character in your name
+		// Replace all r with another character in your name
 		
 		System.out.println("Replaced name is: "+ my_name.replace("r", "h"));
 		

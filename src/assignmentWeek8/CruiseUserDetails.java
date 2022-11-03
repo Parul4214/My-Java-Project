@@ -30,11 +30,11 @@ public class CruiseUserDetails {
 
 	}
 	public void setFull_name() {
-		String enter_name = obj.next();
+		String enter_name = obj.nextLine();
 		this.full_name = enter_name;
 	}
 	public void setPhone_number() {
-		String enter_num = obj.next();
+		String enter_num = obj.nextLine();
 		this.phone_number = enter_num;
 		
 	}
@@ -124,9 +124,9 @@ public class CruiseUserDetails {
 				switch (new_info) {
 				case 1:
 					System.out.println("Enter your New Password");
-					String new_password = obj.next();
+					String new_password = obj.nextLine();
 					System.out.println("confirm password");
-					String confirm_password = obj.next();
+					String confirm_password = obj.nextLine();
 					if (new_password.equals(confirm_password)) {
 						this.user_password = new_password;
 						System.out.println("Password updated successfully");
@@ -137,13 +137,13 @@ public class CruiseUserDetails {
 
 				case 2:
 					System.out.println("Enter your New phone number");
-					String new_phnNumber = obj.next();
+					String new_phnNumber = obj.nextLine();
 					this.phone_number = new_phnNumber;
 					System.out.println("Phone number updated successfully");
 					break;
 				case 3:
 					System.out.println("Enter your New User Name");
-					String new_user_name = obj.next();
+					String new_user_name = obj.nextLine();
 					this.user_name = new_user_name;
 					System.out.println("User Name updated successfully");
 					break;
