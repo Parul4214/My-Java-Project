@@ -48,7 +48,7 @@ public class CruiseUserDetails {
 			System.out.println("Password is too short");
 		}else {	
 			System.out.println("Confirm password");
-			String confirm_password = obj.next();
+			String confirm_password = obj.nextLine();
 			if(new_password.equals(confirm_password)) {
 				this.user_password = new_password;
 				System.out.println("Password updated successfully");
@@ -66,7 +66,7 @@ public class CruiseUserDetails {
 		int return_value = 0;
 		while (password_check_attempts < 3) {
 			System.out.println("Enter your existing password");
-			String old_passwrd = obj.next();
+			String old_passwrd = obj.nextLine();
 			if (old_passwrd.equals(this.user_password)) {
 				System.out.println("Password Verified");
 				return_value = 1;
