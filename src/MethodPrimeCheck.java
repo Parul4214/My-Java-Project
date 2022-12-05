@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MethodPrimeCheck {
-	 int prime_check(int given_number)
+	 static int prime_check(int given_number)
 	{
 		int prime_flag=0;
 		if (given_number <= 0)
@@ -22,22 +22,22 @@ public class MethodPrimeCheck {
 		return prime_flag;
 	}
 
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		
-//		Scanner myObj = new Scanner(System.in);// object declared to use scanner class
-//		System.out.println("Enter any Integer");
-//
-//		int given_number = myObj.nextInt();// user input stored in variable
-//		myObj.close(); // close scanner class, no more input from user
-//if (prime_check(given_number)==0)
-//	System.out.println("number is not prime");
-//else
-//	System.out.println("number is  prime");
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner myObj = new Scanner(System.in);// object declared to use scanner class
+		System.out.println("Enter any Integer");
+
+		int given_number = myObj.nextInt();// user input stored in variable
+		myObj.close(); // close scanner class, no more input from user
+if (prime_check(given_number)==0)
+	System.out.println("number is  prime");
+else
+	System.out.println("number is  not prime");
 
 
 
-	//}
+	}
 
 }
 

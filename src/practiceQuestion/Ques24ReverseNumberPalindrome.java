@@ -2,7 +2,7 @@ package practiceQuestion;
 
 import java.util.Scanner;
 
-public class ReverseNumberPalindrome {
+public class Ques24ReverseNumberPalindrome {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -12,23 +12,23 @@ public class ReverseNumberPalindrome {
 
 		int num = sc.nextInt();
 		
-//		int originalNum=num;
-//
-//		int reverseNum = 0;
-//		System.out.println(num);
-       //////////////////////Using algorithm/////////////
-		//while (num != 0) {
-//
-//			reverseNum = reverseNum * 10 + num % 10; 
-//			num = num / 10; 
-//		}
-//		System.out.println(reverseNum);
-//		
-//		if(originalNum==reverseNum) {
-//			System.out.println("Number is Palindrome");
-//		}else {
-//			System.out.println("Number isn't Palindrome");
-//		}
+		int originalNum=num;
+
+		int reverseNum = 0;
+		System.out.println(num);
+       ////////////////////Using algorithm/////////////
+		while (num != 0) {
+
+			reverseNum = reverseNum * 10 + num % 10; 
+			num = num / 10; 
+		}
+		System.out.println(reverseNum);
+		
+		if(originalNum==reverseNum) {
+			System.out.println("Number is Palindrome");
+		}else {
+			System.out.println("Number isn't Palindrome");
+		}
 		///////USing String Buffer Class///////////////
 		
 //		StringBuffer sb= new StringBuffer(String.valueOf(num));
@@ -48,11 +48,11 @@ public class ReverseNumberPalindrome {
 		String reverse=String.valueOf(sbuild.reverse());
 		System.out.println(reverse);
 		
-		if(numSting.equalsIgnoreCase(reverse)) {
-			System.out.println("Number is palindrome");
-		}else {
-			System.out.println("Num isn't palindrome");
-		}
+//		if(numSting.equalsIgnoreCase(reverse)) {
+//			System.out.println("Number is palindrome");
+//		}else {
+//			System.out.println("Num isn't palindrome");
+//		}
+//	}
 	}
-
 }

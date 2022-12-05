@@ -2,7 +2,7 @@ package practiceQuestion;
 
 import java.util.Scanner;
 
-public class ReversePalindromeString {
+public class Ques1ReversePalindromeString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,16 +15,16 @@ public class ReversePalindromeString {
 
 		////////////// Using String concatenation operator//////////////////////
 
-//		for (int i=name.length()-1; i>=0; i--) {
-//			reverseName=reverseName+name.charAt(i);
-//			System.out.println(reverseName);
-//	}
-//		
-//		if(name.equalsIgnoreCase(reverseName)) {
-//			System.out.println("String is Palindrome");
-//		}else {
-//			System.out.println("String is not Plaindrome");
-//		}
+		for (int i=name.length()-1; i>=0; i--) {
+			reverseName=reverseName+name.charAt(i);
+		
+	}
+		System.out.println(reverseName);
+		if(name.equalsIgnoreCase(reverseName)) {
+			System.out.println("String is Palindrome");
+		}else {
+			System.out.println("String is not Plaindrome");
+		}
 		/////////////// Using character array////////////////////////////
 
 //		char[] stringTochar=name.toCharArray();
@@ -36,18 +36,18 @@ public class ReversePalindromeString {
 //		}
 
 		////////////////// Using String buffer Class/////////////
-
-		StringBuffer sb = new StringBuffer(name);
-		// StringBuffer revName= sb.reverse();
-		String rev = String.valueOf(sb.reverse());
-
-		System.out.println(rev);
-
-		if (name.equalsIgnoreCase(rev)) {
-			System.out.println("String is palidrome");
-		} else {
-			System.out.println("String is not palindrome");
-		}
+//
+//		StringBuffer sb = new StringBuffer(name);
+//		// StringBuffer revName= sb.reverse();
+//		String rev = String.valueOf(sb.reverse());
+//
+//		System.out.println(rev);
+//
+//		if (name.equalsIgnoreCase(rev)) {
+//			System.out.println("String is palidrome");
+//		} else {
+//			System.out.println("String is not palindrome");
+//		}
 
 	}
 }
