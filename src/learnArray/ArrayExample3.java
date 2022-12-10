@@ -19,10 +19,9 @@ public class ArrayExample3 {
 				}
 			}
 		}
-			// for loop for output
-			for (int i = 0; i < givenArray.length; i++) {
-				System.out.print(givenArray[i] + " ");
-			}
+		// for loop for output
+		for (int i = 0; i < givenArray.length; i++) {
+			System.out.print(givenArray[i] + " ");
 		}
 	}
-
+}
